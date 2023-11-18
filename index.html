@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Display</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/nnfx-dark.min.css">
+</head>
+<style>
+    code{
+        font-size: 18px;
+    }
+    
+</style>
+<body>
+    <div class="container">
+    <pre>
+        <code class="language-java">
+/* Write a Java program that accepts an integer and checks whether it is an armstrong
+number or not. */
+import java.util.*;
+class armstrong {
+    public static void main(String[] args) {
+        System.out.print("Enter the integer: ");
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int temp, total=0;
+        for(int i=n;i!=0;i/=10){
+            temp=i%10;
+            total=total+(temp*temp*temp);
+        }
+        if(total==n){
+            System.out.println(n+" is an Armstrong Number");
+        }
+        else{
+            System.out.println(n+" is not an Armstrong Number");
+        }
+    }
+}
+</code>
+</pre>
+</div>
+
+<div class="container">
+    <pre>
+        <code class="language-java">
+/* Write a Java program that accepts an integer and checks whether it is palindrome or
+not. */
+import java.util.*;
+class Palindrome {
+    public static void main(String[] args) {
+        System.out.print("Enter the integer: ");
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int sum=0, r,t=n;
+        for (int i=0;n>0;n/=10) {
+            r=i%10; //1
+            
+            sum=(i*10)+r;
+        }
+        if(t==sum)
+        System.out.println(n+" is Palindrome");
+        else
+        System.out.println(n+" is not Palindrome");
+    }
+}
+
+</code>
+</pre>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+    <script>hljs.highlightAll();
+    
+    </script>
+    </body>
+</html>
